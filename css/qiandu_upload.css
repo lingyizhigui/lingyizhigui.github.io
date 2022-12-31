@@ -1,0 +1,58 @@
+@charset "utf-8";
+#upload{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+form{
+	display: none;
+}
+#uploadtext{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 400px;
+	margin-top: -200px;
+	width: 800px;
+	margin-left: -400px;
+	text-align: center;
+}
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#uploadtext img{
+	height: 64px;
+	width: 98px;
+	margin-bottom: 10px;
+}
+#uploadtext span{
+	font-size: 1.5em;
+}
+.button{
+	display: block;
+	height: 1.5em;
+	width: 5em;
+	margin: 10px auto;
+	border-radius: 5px;
+	background-color: #00BB67;
+	cursor: pointer;
+}
+#uploadurl{
+	width: 250px;
+	text-align: left;
+	margin: 0 auto;
+}
+#errordiv h2{
+	color: red;
+}
+.urlinput{
+	font-size: 1.3em;
+	height: 2em;
+	margin-bottom: 0.5em;
+	color: #F85400;
+}

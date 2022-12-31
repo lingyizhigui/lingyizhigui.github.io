@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+	<meta charset="utf-8">
+	<title>千度图床</title>
+	<link rel="shortcut icon" href="img/qian.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/qiandu_baidu.css" type="text/css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_3815062_zv1wkcjime.css" type="text/css">
+	<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="none">
+</head>
+<body>
+<div id="container">
+	<div id="uploaddiv">
+		<h2 >核心功能区</h2>
+		<form enctype="multipart/form-data" action="https://sp0.baidu.com/6_R1fD_bAAd3otqbppnN2DJv/Pic/upload?pid=super&amp;app=skin&amp;logid=1234567890" method="post" target="_blank">
+		<!--logid后为任意十位的数字-->
+		<input id="imginput" type="file" name="file" accept="image/*" class="upload" value="123" required>
+		<input type="submit" value="上传" class="upload">
+			<button>132</button>
+		</form>
+		<p style="color: gray">遇到问题？<a href="#help" class="openhelp">查看使用说明</a>。记得先选图片再点上传哦！</p>
+	</div>
+	<div class="kuai">
+		<input id="double" >
+		<button onClick="cut()">网址修正</button>
+		<p id="besturl" class="result">修正后的网址显示在这里</p>
+	</div>
+	<div class="kuai">
+		描述<input id="des">
+		网址<input id="url">
+		<button onClick="addurl()">添加</button>
+		<p id="result" class="result">添加后将保存在本地</p>
+	</div>
+	<div class="kuai" id="list">
+		<div id="yingcang" style="display: none;">
+			<a href="https://imgsrc.baidu.com/super/pic/item/83025aafa40f4bfbdb422697464f78f0f6361866.jpg" target="_blank">
+			别点，真的不是瑟图</a>（出处：爆机少女喵小吉，别的图有点过不好公示。懂无审核上传了吧？）</div>
+		<table id="table"></table>
+		<button onClick="clearall()" id="clearall">删除全部（慎用）</button>
+	</div>
+	<footer>© 2022 <a href="https://www.xbai.gq/">xbai.gq</a> All Rights Reserved. 本站仅供学习使用，如有侵权请联系 i@smallbai.gq 会尽快删除</footer>
+</div>
+	
+	<div id="help">
+		<a href="#help" onClick="closeHelp()">
+			<img src="https://imgsrc.baidu.com/super/pic/item/f603918fa0ec08fa182484641cee3d6d54fbdac9.jpg" alt="×" id="cha">
+			<!--<i class="icon close" style="font-size: 32px;"></i>-->
+		</a>
+		<article>
+		<h1>帮助文档</h1>
+		<h2>使用方法</h2>
+			<p style="color: red"><strong>注意！！！必须先登录百度账号！电脑用户请通过<a href="https://passport.baidu.com/" target="_blank">百度账号</a>检查自己是否已登录，手机用户请使用已经登录的百度浏览器。</strong></p>
+			<p>首先点击<mark>选择文件</mark>，选择一张图片，再点<mark>上传</mark>,上传成功的话类似下图</p>
+				<a href="https://imgsrc.baidu.com/super/pic/item/9c16fdfaaf51f3de11002ba7d1eef01f3b297947.jpg" target="_blank">
+				<img src="https://imgsrc.baidu.com/super/pic/item/9c16fdfaaf51f3de11002ba7d1eef01f3b297947.jpg" alt="成功示例"></a>
+			<p>（标红的就是未修正网址）随后把<strong>所有</strong>文字全选（Ctrl+A）再复制（Ctrl+C），接着在第一个输入框粘贴（Crtl+V），单击<mark>网址修正</mark>，链接就生成了。</p>
+			<p>生成的链接自动填入<mark>网址</mark>框。您可以输入图片描述后点击<mark>添加</mark>，表格中就会出现新的一行。这样日后就能方便得找到自己上传图片的链接了。在使用前请阅读帮助文档最下方使用说明。</p>
+		<h2>图床是干什么的？</h2>
+			<p>图床指图片托管服务，通过固定链接从图床的服务器加载图片，对于站长可以减少服务器负荷，提高加载速度（下面的示例图片就是从百度服务器加载的），也可以当作储存较大图片且便于分享的库。本站相比其他免费图床，有三个无与伦比的优点：<strong>内容无审核，国内速度极致，数量无限制</strong>。</p>
+		<h2>常见问题</h2>
+			<h4>点击上传后和图示不一样（anonymous user或页面无法找到）？</h4>
+			<p>您应该检查1、百度账号是否已经登录（手机端必须使用百度浏览器） 2、图片不大于20Mb（4k建议转成png上传，8k及以上的png格式大于20M，所以没法传）</p>
+			<h4>修正后的网址打开为404not found？</h4>
+			<p>404 not found：您可以检查一下<strong>链接末尾是否有完整的.jpg</strong>。在手动复制而不是直接全选时，往往会漏掉最后几个字符，导致修正时把网址也裁剪了。注意.jpg只是重命名，您图片的格式并没有更改（gif还能动）</p>
+			<h4>隐私和储存问题？</h4>
+			<p>我们注重您的隐私，所以储存是完全本地化的（运用localStorage），这意味着只有百度知道您上传了什么（它不会追踪您），本站服务器完全不会知道您的图片链接。缺点是<strong>切换设备后储存就没了</strong>。您可以重新上传来获取新的链接，或者将网址备份到本地或云端。提示：多次上传相同的图片得到的网址是固定的。</p>
+			<h4>20Mb是不是太小了？</h4>
+			<p>目前手机拍照的大小在5Mb左右，高端手机高像素模式一般小于10Mb。专业单反最清晰的格式20Mb左右。也可以参考同行们，免费图床大多只支持10Mb,有的仅支持5Mb。同时，本站不限制数量，个人使用绝对够用了。</p>
+			<h4>怎么找到这个网站？</h4>
+			<p>记住xbai.gq即可，在主页上有通向本站的导航（虽然xbai.gq也不好记）。所以想二次使用的话，请您把域名添加到收藏夹、备忘录等。</p>
+			<h4>无数量限制？那怎么批量上传呢？</h4>
+			<p>日后或许会更新批量上传功能。有能力的可以翻一翻网站源码，看看表单的action，自己写一个批量的脚本。站长刚刚入坑，还什么都不会。</p>
+			<h4>工作原理？</h4>
+			<p>本站并不是标准意义上的图床，只是提供了上传到百度的渠道。不过百度也没有提供图片托管服务，能上传是因为之前偶然发现了百度一个隐蔽的接口。连接这个接口只需要已登录百度账号，而上传参数中要求的账号id可以甚至能乱填。这理论上是个小漏洞，但是几年了都没有修。只能说百度财大气粗，区区20Mb的图片，随便传。百度的速度肯定远超所有免费图床，同时无数量限制也没有审核，永久有效（可以找到十几年前的图，且站长传的某种图至今也没和谐）。</p>
+		<h2><mark>免责声明（必读）</mark></h2>
+			<p>访问者在接受本网站服务之前，请务必仔细阅读本声明。访问者访问本网站的行为以及通过各类方式利用本网站的行为，都将被视作是对本声明全部内容的无异议的认可。</p>
+			<p>本站出于兴趣开发，仅供爱好者学习编程使用。本站无意侵犯任何公司、组织或个人的权利。在取得百度授权前，不得将任何已上传资源商用。在上传图片时，必须尊重作品的版权、著作权。本网站不保证上传后资源的稳定性，资源丢失等情况造成的损失，请访问者自行承担。严禁上传任何涉嫌违法违规、政治敏感、色情暴力的图片。如有用户将本站用于不法用途，皆与本站无关，本网站将不承担任何法律责任。特此声明。</p>
+			<p>以上声明于2022年12月1日公布并生效至今。</p>
+		</article>
+	</div>
+	<script type="text/javascript" src="js/baidu.js"></script>
+</body>
+</html>

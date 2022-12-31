@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="none">
+<link href="css/qiandu_upload.css" rel="stylesheet" type="text/css">
+<link href="css/qiandu_general.css" rel="stylesheet" type="text/css">
+<link href="img/qian.png" rel="shortcut icon" type="img/x-icon">
+<title>上传 — 千度图床</title>
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<div id="headback"></div>
+		<a href="index.html"><img id="logo" src="img/qiandu.png" alt="千度图床"></a>
+		<div id="tops">
+			<a href="upload.html"><img src="img/upload_s.png" alt="upload"><span class="tops">上传</span></a>
+			<a href="help.html"><img src="img/help.png" alt="help"><span class="tops">帮助</span></a>
+			<a href="javascript:window.location.href='./help.html';window.name='true'"><img src="img/about.png" alt="setting"><span class="tops">关于</span></a>
+			<a href="home.html"><img src="img/user.png" alt="user"><span class="tops">我的</span></a>
+		</div>
+	</header>
+	<div id="upload">
+		<form id="form">
+			<input id="imginput" type="file" name="file" accept="image/*" class="upload">
+			<button id="submit"></button>
+		</form>
+		<div id="uploadtext">
+			<img class="center" src="img/upload.png" alt="上传图标">
+			<span>拖拽图像到本页面，或</span>
+			<span class="button" onClick="document.getElementById('imginput').click()">浏览文件</span>
+			<div id="uploadurl">
+			<p>文件名：<span id="imgname"></span></p>
+			<p>文件大小：<span id="imgsize"></span></p>
+			<h3>只支持上传单张图片！！！</h3>
+			</div>
+			<span class="button" onClick="submit()" title="请先选择一张图片" style="opacity: 0.5;cursor: not-allowed">一键上传</span>
+		</div>
+	</div>
+	<div class="alert" id="errordiv">
+		<h2>ERROR!</h2>
+		<span id = "error">错误原因未显示！如可能请联系i@smallbai.gq报告错误，会尽快修复</span>
+		<div class="checkbuttons">
+			<div onClick="closeerror()">确定</div>
+		</div>
+	</div>
+	<div class="alert" id="urldiv" >
+		<h2>上传成功！</h2>
+		<span>您可以在下面修改图片名称：</span><br>
+		<input class="urlinput" ><br>
+		<span>这里是您的图片链接（即使不保存也永久有效）</span><br>
+		<input class="urlinput" readOnly="true" value="https://示例图片">
+		<div class="checkbuttons">
+			<div onClick="document.getElementById('urldiv').style.display = 'none'">不保存</div>
+			<div onClick="addurl()">保存</div>
+		</div>
+	</div>
+	<div class="alert" id="signin">
+		<h2>请登录！</h2>
+		<p>本站不单独设置账号，您在百度登录即可开始上传。电脑用户<a href="https://passport.baidu.com" target="_blank">点击这里</a>前往登录，手机用户请使用已登录的百度浏览器。登录完成后，请点击“完毕”。</p>
+		<div class="checkbuttons">
+			<div onClick="document.getElementById('signin').style.display = 'none'">完毕</div>
+		</div>
+	</div>
+	<footer>
+	© 2022-2023 <a href="https://www.xbai.gq/">xbai.gq</a> All Rights Reserved.
+	</footer>
+</div>
+	<script src="js/qiandu_upload.js" type="text/javascript"></script>
+</body>
+</html>

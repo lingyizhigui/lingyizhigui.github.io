@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="none">
+<link href="css/qiandu_doc.css" rel="stylesheet" type="text/css">
+<link href="css/qiandu_general.css" rel="stylesheet" type="text/css">
+<link href="img/qian.png" rel="shortcut icon" type="img/x-icon">
+<title>帮助文档 — 千度图床</title>
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<div id="headback"></div>
+		<a href="index.html"><img id="logo" src="img/qiandu.png" alt="千度图床"></a>
+		<div id="tops">
+			<a href="upload.html"><img src="img/upload_s.png" alt="upload"><span class="tops">上传</span></a>
+			<a href="help.html"><img src="img/help.png" alt="help"><span class="tops">帮助</span></a>
+			<a href="javascript:window.location.href='./help.html';window.name='true'"><img src="img/about.png" alt="setting"><span class="tops">关于</span></a>
+			<a href="home.html"><img src="img/user.png" alt="user"><span class="tops">我的</span></a>
+		</div>
+	</header>
+	<h1>帮助文档</h1>
+	<nav>
+		<div onClick="location.reload()" id="active" class="nav">常见问题</div>
+		<div onClick="about()" class="nav">关于本站</div>
+		<div onClick="mianze()" class="nav">免责声明</div>
+	</nav>
+	<article id="article">
+		<h3>为什么是最快、最自由的免费图床？</h3>
+		<p>免费图床都严重缺乏资金，支持10MB图片的已经少之又少，有cdn加速的更是只有一家。本站同样不可能用爱发电，是偷偷“借用”了百度的服务器（详见“关于本站”）。百度的速度在国内绝对是最顶尖的。同时，其它图床都有非常严苛的AI审核，本站则完全没有（懂得都懂）。</p>
+		<h3>隐私安全</h3>
+		<p>本站为纯前端，没有后台储存您的上传历史等，不会抓取您的图片或链接。不过图床就是为了分享而生，只要公布链接，任何人都能通过其访问您的图片。本站不支持撤销删除，所以涉及您隐私的图片务必谨慎上传。</p>
+		<h3>上传历史的储存</h3>
+		<p>如上文所述，本站没有后台数据库，无法云端储存您的数据。在“我的”中图片都保存在本地，更换电脑或者清除缓存都可能丢失数据。您可以导出后把链接保存在备忘录等。</p>
+		<h3>为什么要登录百度账号</h3>
+		<p>千度图床，已经暗示了与百度的关系了。目前还没有好的方法绕过登录，百度账号也算是人人都有的必需品了吧。</p>
+		<h3 id="chaoshi">错误：上传超时</h3>
+		请依次按照下列步骤操作，直到解决！
+		<p>1、将本站列入广告拦截、安全保护等插件的白名单，暂时停用安全模式、隐私模式等。本站使用xhr跨站请求baidu.com，不会有安全问题。</p>
+		<p>2、假如自己上传的图片分辨率很大（如4k：3840x2160及以上），建议：先转成png格式，如果png格式小于20Mb那就一定能传。知识十几MB的很容易上传超时，可以多上传几次。8k及以上无法上传（转成png必定大于20MB）。</p>
+		<p>3、按下F12打开控制台，再上传一次，看一下有没有红色的报错（含有“POST https://sp0.baidu.com/ ...”ERROR：...），百度一下错误原因。</p>
+		如果还没成功，请联系i@smallbai.gq，会尽量帮您解决。
+	</article>
+	<footer>
+		© 2022-2023 <a href="https://www.xbai.gq/">xbai.gq</a> All Rights Reserved.
+	</footer>
+</div>
+	<script src="js/qiandu_doc.js" type="text/javascript"></script>
+</body>
+</html>

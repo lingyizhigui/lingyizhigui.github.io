@@ -1,0 +1,144 @@
+@charset "utf-8";
+		*{
+			box-sizing: border-box; 
+			word-break:break-all;
+		}
+		html{height: 100%;}
+		body{
+			font-size: 120%;
+			margin: 0;
+			padding: 10px 10px 0 10px;
+			text-align: center;
+			background-color: #f6f6f6;
+			overflow-x: hidden;
+			height: 100%;
+		}
+		div#container{
+			padding-bottom: 60px;
+			min-height: 100%;
+			position: relative;
+		}
+		div#uploaddiv{
+			width: 100%;
+			padding: 10px 20px;
+			border: 6px dashed aqua;
+			border-radius: 25px;
+			background-color: #DFFFFF;
+		}
+		input.upload{
+			font-size: 1.3em;
+			
+		}
+		div#uploaddiv p{
+			margin: 10px 0 0 0px;
+			font-size: 0.8em;
+		}
+		div#uploaddiv h2{
+			margin: 4px 0 20px 0px;
+			color: #AE00DD;
+			text-shadow: 2px 2px 3px blue;
+		}
+		div#help{
+			position: absolute;
+			height: 80%;
+			min-height: 400px;
+			left: 0;right: 0;top: 50px;bottom: 0;
+			margin: 0 auto;
+			z-index: 1;
+			background-color: #FAF9DE;
+			border: 4px solid #D37805;
+			border-radius: 10px;
+			width: 80%;
+			visibility: hidden;
+		}
+		div#help article{
+			text-align: left;
+			overflow: auto;
+			overflow-x: hidden;
+			height: 100%;
+			padding: 0 40px;
+			word-break:break-all;
+		}
+		div#help article p{
+			text-indent: 2em;
+		}
+		div#help article h1{
+			text-align: center;
+			color: cornflowerblue;
+			font-size: 2em;
+		}
+		div img:not(#cha){
+			width: 493px;
+			height: 124px;
+			display: block;
+			margin: 0 auto;
+		}
+		div#help img#cha,div#help i{
+			position: absolute;
+			top: 10px;
+			right: 25px;
+			width: 32px;
+			height: 32px;
+			z-index: 2;
+		}
+		button:not(#clearall):not(.copy){
+			height: 50px;
+			padding: 0px 10px;
+			font-size: 1em;
+			margin: 0;
+			vertical-align: middle;
+		}
+		button.copy{font-size: 1em;}
+		button#clearall{
+			font-size: 0.9em;
+			color: gray;
+			margin-top: 5px;
+		}
+		input{
+			height: 50px;
+			margin: 0;
+			padding: 10px;
+			vertical-align: middle;
+			font-size: 1em;
+		}
+		p.result{
+			font-size: 1em;
+			margin: 0;
+		}
+		div.kuai{
+			margin-top: 20px;
+		}
+		table{
+			width: 100%;  
+			border-collapse: collapse;
+		}
+		table,td,th{
+			border: 3px solid #AE00DD;
+		}
+		td{
+			padding: 5px 0;
+		}
+		table .delete{
+			color: red;
+			float: left;
+			font-size: 0.8em;
+			padding-left: 0.3em;
+			text-decoration: none;
+		}
+		footer{
+			font-size: 0.8em;
+			color: #333333;
+			position: absolute;
+			left: 0;right: 0;bottom: 15px;
+			margin: 0 auto;
+		}
+		footer a{
+			text-decoration: none;
+			color: #333333;
+		}
+		footer a:hover{color: coral;}
+		h4#mobile{display: none}
+@media only screen and (max-width: 600px){
+	body{font-size: 90%;}
+	div#coutainer{padding-bottom: 5em;}
+}

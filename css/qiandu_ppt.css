@@ -1,0 +1,100 @@
+@charset "utf-8";
+body{overflow: hidden;}
+#text{
+	position: absolute;
+	height: 300px;
+	width: 600px;
+	top: 50%;
+	margin-top: -150px;
+	left: 50%;
+	margin-left: -300px;
+	font-size: 150%;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	text-align: center;
+}
+#start{
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	width: 120px;
+	height: 50px;
+	background-color: #F85400;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 0.8em;
+	text-shadow: 0 0;
+	line-height: 50px;
+	color: white;
+	margin-top: 20px;
+}
+#start:hover{background-color: #D34700}
+.button{
+	cursor: pointer;
+	height: 100px;
+	width: 50px;
+	text-align: center;
+	padding-top: 18px;
+	font-size: 3em;
+	transition: background-color 0.5s,opacity 0.5s;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+}
+.button:hover{
+	background-color: #DDDDDD;
+	opacity: 0.4;
+}
+.button#next{
+	right: 0px;
+	border-radius: 15px 0 0 15px;
+}
+.button#last{
+	left: 0px;
+	border-radius: 0 15px 15px 0;
+}
+div#imgs{
+	height: 100%;
+}
+.main{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+	animation: display 1s,kuosan 7s linear;
+	animation-fill-mode: forwards;
+	display: none;
+	z-index: -2;
+	position: absolute;
+	top: 0;
+}
+.dot{
+	height: 20px;
+	width: 20px;
+	margin: 0 5%;
+	border: 10px #BBBBBB solid;
+	border-radius: 50%;
+	font-size: 0em;
+	cursor: pointer;
+	transition: border-color 0.5s;
+}
+.dot:hover{
+	border-color: #333333;
+}
+div#dots{
+	width: 400px;
+	position: absolute;
+	text-align: center;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -200px;
+}
+@keyframes display{
+	from{opacity: 0.6}
+	to{opacity: 1}
+}
+@keyframes kuosan{
+	from{transform: scale(1)}
+	to{transform: scale(1.1)}
+}

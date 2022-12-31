@@ -1,0 +1,5 @@
+# 禁用嵌套，防止xss攻击
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
