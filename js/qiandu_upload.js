@@ -4,7 +4,7 @@ var tuoz = document.getElementById("upload");
 var imgdes = "";
 if(localStorage.getItem("qianduimgs") == null){
 	localStorage.setItem("qianduimgs","[]");
-	document.getElementById("signup").style.display = "block";
+	document.getElementById("signin").style.display = "block";
 }
 var imgs = JSON.parse(localStorage.getItem("qianduimgs"));
 function storage(){
