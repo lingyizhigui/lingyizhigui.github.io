@@ -90,7 +90,7 @@ tuo.addEventListener("drop",function(e){
 			//本地为空时添加示例
 			let n = allHistory.length;
 			if(n == 0){
-				allHistory[0] = {des:"AI绘图（示例）",url:"https://imgsrc.baidu.com/super/pic/item/fd039245d688d43f62100131381ed21b0ff43bbc.jpg"};
+				allHistory[0] = {des:"AI绘图（示例）",url:"https://imgsrc.baidu.com/xiao/bai/item/fd039245d688d43f62100131381ed21b0ff43bbc.jpg"};
 				localStorage.setItem("qianduhistory",JSON.stringify(allHistory));
 			}
 			for(let i = 0;i < allHistory.length;i++){
@@ -180,8 +180,9 @@ tuo.addEventListener("drop",function(e){
 					else{
 						haveCut = haveCut.replace(/\\/g,"");
 						let place1 = haveCut.indexOf("http:") + 4;
-						let place2 = haveCut.length - 3;
-						let url = haveCut.substring(place1,place2);
+						let url = haveCut.substring(place1,place1 + 79);
+						url = url.replace("pic","bai")
+						url = url.replace("super","xiao")
 						document.getElementById("besturl").innerHTML ='<a target="_blank" href="https' + url +'">https' + url + '</a>';
 						document.getElementById("url").value = "https" + url;
 				}

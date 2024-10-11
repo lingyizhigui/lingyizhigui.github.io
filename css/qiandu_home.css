@@ -57,6 +57,8 @@ body::-webkit-scrollbar{
 	height: 2em;
 	background-color: #FFF7CF;
 	border: 6px #FF8136 groove;
+	border-radius: 20px 20px;
+	box-shadow: 5px -5px 5px #3A3A3A;
 	margin-top: 20px;
 	cursor: pointer;
 }
